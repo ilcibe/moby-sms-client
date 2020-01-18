@@ -20,5 +20,8 @@
     "autoload-dev": {
         "IlCibe\\MobySmsClient\\": "./src",
         "IlCibe\\MobySmsClient\\Tests\\": "./tests"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
     }
 }

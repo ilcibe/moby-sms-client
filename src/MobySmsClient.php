@@ -23,17 +23,21 @@ class MobySmsClient
     /** @var $client */
     private $client;
 
-    public function __construct()
+    /**
+     * MobySmsClient constructor.
+     * @param string $username
+     * @param string $password
+     */
+    public function __construct($username, $password)
     {
         $this->client = new Client([
 
             // Base URI is used with relative requests
-            'base_uri' => 'http://httpbin.org',
+            'base_uri' => self::BASE_URL,
 
             // You can set any number of default request options.
             'timeout'  => 10.0
-        ])
-
+        ]);
 
     }
 
