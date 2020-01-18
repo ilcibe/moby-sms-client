@@ -1,0 +1,24 @@
+{
+    "name": "ilcibe/moby-sms-client",
+    "description": "moby sms client",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "alessandro cibelli",
+            "email": "cibelli.alessandro84@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "IlCibe\\MobySmsClient\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "IlCibe\\MobySmsClient\\": "./src",
+        "IlCibe\\MobySmsClient\\Tests\\": "./tests"
+    }
+}
