@@ -1,10 +1,10 @@
 <?php
 
-
 namespace IlCibe\MobySmsClient\Tests;
-use PHPUnit\Framework\TestCase;
 
-class EnvTest extends TestCase
+use IlCibe\MobySmsClient\Tests\Common\CommonTestCase;
+
+class EnvTest extends CommonTestCase
 {
     public function test_env()
     {

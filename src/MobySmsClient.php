@@ -2,6 +2,7 @@
 
 namespace IlCibe\MobySmsClient;
 use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Response;
 
 class MobySmsClient
 {
@@ -39,6 +40,43 @@ class MobySmsClient
             'timeout'  => 10.0
         ]);
 
+        $this->login($username, $password);
     }
+
+
+    /**
+     * login
+     * @param string $username
+     * @param string $password
+     * @return array
+     */
+    private function login($username, $password)
+    {
+        /** @var array $param */
+        $param = [
+            'query' => [
+                'username' => $username,
+                'password' => $password,
+            ]
+        ];
+
+        /** @var Response $response */
+        $response =  $this->client->get( 'API/v1.0/REST/login', $param);
+
+        $resp = explode(';', $response->getBody()->getContents());
+        $this->userKey = $resp[0];
+        $this->sessionKey = $resp[1];
+
+        return [$this->userKey, $this->sessionKey];
+    }
+
+
+    public function get_credit()
+    {
+        echo 1;
+
+    }
+
+
 
 }

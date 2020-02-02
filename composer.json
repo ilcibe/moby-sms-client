@@ -14,12 +14,14 @@
     },
     "autoload": {
         "psr-4": {
-            "IlCibe\\MobySmsClient\\": "./src"
+            "IlCibe\\MobySmsClient\\": "src"
         }
     },
     "autoload-dev": {
-        "IlCibe\\MobySmsClient\\": "./src",
-        "IlCibe\\MobySmsClient\\Tests\\": "./tests"
+        "psr-4": {
+            "IlCibe\\MobySmsClient\\": "src",
+            "IlCibe\\MobySmsClient\\Tests\\": "tests"
+        }
     },
     "require-dev": {
         "phpunit/phpunit": "^7"
